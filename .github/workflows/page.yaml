@@ -19,11 +19,13 @@ jobs:
         with:
           node-version: "23.3.0"
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install bun and dependencies
+        run: |
+          npm install -g bun
+          bun install
 
       - name: Build the site
-        run: pnpm run build # Adjust this command to your build script
+        run: bun run build # Adjust this command to your build script
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
