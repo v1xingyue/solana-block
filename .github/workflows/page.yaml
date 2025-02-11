@@ -31,6 +31,12 @@ jobs:
       - name: Build the site
         run: bun run build # Adjust this command to your build script
 
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: ./dist # Adjust this to your actual build output directory
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
