@@ -8,7 +8,7 @@ on:
 
 permissions:
   id-token: write # Grant write permission for id-token
-  contents: read # Default read permission for repository contents
+  contents: write # Default write permission for repository contents
   pages: write # Grant write permission for GitHub Pages
 
 jobs:
