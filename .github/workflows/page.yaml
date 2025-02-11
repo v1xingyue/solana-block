@@ -6,6 +6,10 @@ on:
       - "v*.*.*" # Triggers on version tags like v1.0.0
   workflow_dispatch: # Allows manual triggering
 
+permissions:
+  id-token: write # Grant write permission for id-token
+  contents: read # Default read permission for repository contents
+
 jobs:
   build:
     runs-on: ubuntu-latest
